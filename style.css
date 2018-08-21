@@ -1,6 +1,12 @@
 span {
   color: blue;
 }
+ol {
+  list-style-type: decimal;
+}
+ul {
+  list-style-type: square;
+}
 li {
   margin-top: 10px;
 }
