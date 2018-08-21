@@ -1,7 +1,3 @@
-div {
-  max-width: 720px;
-  margin: auto;
-}
 span {
   color: blue;
 }
@@ -47,4 +43,16 @@ a:hover {
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
+}
+
+@media screen and (min-width: 61em) {
+    body {
+      width: 61em;
+      margin: auto;
+    }
+}
+@media screen and (max-width: 61em) {
+    body {
+      width: 100%;
+    }
 }
