@@ -1,0 +1,16 @@
+p {
+  margin-top: 10px;
+}
+a.link {
+  color: #3498DB;
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+span {
+  color: blue;
+}
+li {
+  margin-top: 10px;
+}
