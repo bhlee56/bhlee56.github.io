@@ -1,3 +1,5 @@
+url: "https://bhlee56.github.io" # the base hostname & protocol for your site
+
 # This will require each of these plugins automatically.
 plugins:
   - jekyll-sitemap
