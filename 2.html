@@ -1,25 +1,40 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <link rel="stylesheet" type="text/css" href="style.css" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124427220-1"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
-
     gtag('config', 'UA-124427220-1');
+  </script>
+  <script>
+    function myFunction() {
+        var x = document.getElementById("myTopnav");
+        if (x.className === "topnav") {
+            x.className += " responsive";
+        } else {
+            x.className = "topnav";
+        }
+    }
   </script>
 </head>
 
 <body>
-  <div class="topnav">
-    <a href="index.html"><h2>출마의 변</h2></a>
-    <a href="1.html"><h2>연구비</h2></a>
-    <a class="active" href="2.html"><h2>교 육</h2></a>
-    <a href="3.html"><h2>학 술</h2></a>
-    <a href="4.html"><h2>커뮤니티</h2></a>
-    <a href="5.html"><h2>학회운영</h2></a>
+  <div class="topnav" id="myTopnav">
+    <a href="index.html">출마의 변</a>
+    <a href="1.html">연구비</a>
+    <a class="active" href="2.html">교 육</a>
+    <a href="3.html">학 술</a>
+    <a href="4.html">커뮤니티</a>
+    <a href="5.html">학회운영</a>
+    <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+      <i class="fa fa-bars"></i>
+    </a>
   </div>
 
   <div class="section">
@@ -56,15 +71,6 @@
       <li>청소년 및 국민들에게 다가가는 열린 학회가 되도록 하겠습니다. 이를 위해 청소년을 위한 쉽고 재미있는 물리교재를 한국물리학회가 주도적으로 개발하고자 합니다. 또한 일반인들이 물리학의 중요성을 잘 이해하도록 언론 매체를 통한 특별 기획 프로그램 제작을 적극 추진하겠습니다.</li>
     </ul>
     <br>
-  </div>
-
-  <div class="topnav">
-    <a href="index.html"><h2>출마의 변</h2></a>
-    <a href="1.html"><h2>연구비</h2></a>
-    <a class="active" href="2.html"><h2>교 육</h2></a>
-    <a href="3.html"><h2>학 술</h2></a>
-    <a href="4.html"><h2>커뮤니티</h2></a>
-    <a href="5.html"><h2>학회운영</h2></a>
   </div>
 </body>
 </html>
