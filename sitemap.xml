@@ -6,55 +6,6 @@
             http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 <!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
 
-<<<<<<< HEAD
-
-<url>
-  <loc>https://bhlee56.github.io/</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>1.00</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/index.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/0.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/1.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/2.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/3.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/4.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/5.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-<url>
-  <loc>https://bhlee56.github.io/6.html</loc>
-  <lastmod>2018-08-22T15:01:28+00:00</lastmod>
-  <priority>0.80</priority>
-</url>
-=======
->>>>>>> 0e547b9c44124b90c8629a17fedafdf8dd00421f
 
 <url>
   <loc>https://bhlee56.github.io/</loc>
