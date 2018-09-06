@@ -8,9 +8,9 @@ ol {list-style-type: decimal;}
 ul {list-style-type: square;}
 li {
   margin-top: 10px;
-  line-height: 1.6;
+  line-height: 1.7;
 }
-p {line-height: 1.6;}
+p {line-height: 1.7;}
 a.link {
   color: #3498DB;
   text-decoration: none;
@@ -52,10 +52,22 @@ a:hover {text-decoration: underline;}
   color: white;
 }
 .topnav .icon {display: none;}
+.photoset {
+  display: block;
+  width: 800px;
+  margin: 0 auto;
+}
 @media screen and (max-width: 928px) {
   body {width: 100%;}
 }
-@media screen and (max-width: 718px) {
+@media screen and (max-width: 856px) {
+  .photoset {
+    display: block;
+    width: 100%;
+  }
+  .photoset img {width: 100%;}
+}
+@media screen and (max-width: 764px) {
   .topnav a:not(:first-child) {display: none;}
   .topnav a.icon {
     float: right;
