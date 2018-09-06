@@ -108,12 +108,10 @@ a:hover {text-decoration: underline;}
   animation-name: fade;
   animation-duration: 1.5s;
 }
-
 @-webkit-keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
 }
-
 @keyframes fade {
   from {opacity: .4}
   to {opacity: 1}
@@ -123,16 +121,8 @@ a:hover {text-decoration: underline;}
 @media only screen and (max-width: 300px) {
   .text {font-size: 11px}
 }
-
 @media screen and (max-width: 928px) {
   body {width: 100%;}
-}
-@media screen and (max-width: 856px) {
-  .photoset {
-    display: block;
-    width: 100%;
-  }
-  .photoset img {width: 100%;}
 }
 @media screen and (max-width: 764px) {
   .topnav a:not(:first-child) {display: none;}
