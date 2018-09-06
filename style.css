@@ -4,6 +4,7 @@ body {
   text-align: justify;
 }
 span {color: blue;}
+.bold {font-weight: bold;}
 ol {list-style-type: decimal;}
 ul {list-style-type: square;}
 li {
@@ -21,7 +22,10 @@ a:hover {text-decoration: underline;}
   grid-template-columns: 2fr 1fr;
   text-align: left;
 }
-.red {color: red;}
+.red {
+  color: red;
+  font-weight: bold;
+}
 .section {
   background-color:  #fffff5;
   padding: 60px 20px 0 20px;
