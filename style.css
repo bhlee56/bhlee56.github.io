@@ -40,7 +40,6 @@ a:hover {text-decoration: underline;}
   top: 0; /* Position the navbar at the top of the page */
   width: inherit;
   z-index: 2;
-  border-radius: 20px;
 }
 .topnav a {
   float: left;
