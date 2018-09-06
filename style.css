@@ -60,7 +60,10 @@ a:hover {text-decoration: underline;}
 
 * {box-sizing: border-box;}
 .mySlides {display: none;}
-.mySlides img {vertical-align: middle;}
+.mySlides img {
+  vertical-align: middle;
+  width: 100%;
+}
 .slideshow-container {
   max-width: 800px;
   position: relative;
