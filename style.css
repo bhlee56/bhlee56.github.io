@@ -23,6 +23,7 @@ a:hover {text-decoration: underline;}
   grid-template-columns: 2fr 1fr;
   text-align: left;
 }
+.profile {border-radius: 20px;}
 .red {
   color: red;
   font-weight: bold;
