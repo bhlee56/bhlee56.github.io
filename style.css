@@ -2,6 +2,7 @@ body {
   width: 912px;
   margin: auto;
   text-align: justify;
+  border-radius: 20px;
 }
 span {color: blue;}
 .bold {font-weight: bold;}
@@ -38,6 +39,7 @@ a:hover {text-decoration: underline;}
   top: 0; /* Position the navbar at the top of the page */
   width: inherit;
   z-index: 2;
+  border-radius: 20px;
 }
 .topnav a {
   float: left;
@@ -63,6 +65,7 @@ a:hover {text-decoration: underline;}
 .mySlides img {
   vertical-align: middle;
   width: 100%;
+  border-radius: 20px;
 }
 .slideshow-container {
   max-width: 800px;
@@ -83,6 +86,8 @@ a:hover {text-decoration: underline;}
   padding: 8px 12px;
   position: absolute;
   top: 0;
+  background-color: #000000;
+  border-radius: 20px;
 }
 .dot {
   height: 15px;
