@@ -37,6 +37,7 @@ a:hover {text-decoration: underline;}
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: inherit;
+  z-index: 2;
 }
 .topnav a {
   float: left;
@@ -56,11 +57,65 @@ a:hover {text-decoration: underline;}
   color: white;
 }
 .topnav .icon {display: none;}
-.photoset {
-  display: block;
-  width: 800px;
-  margin: 0 auto;
+
+* {box-sizing: border-box;}
+.mySlides {display: none;}
+.mySlides img {vertical-align: middle;}
+.slideshow-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
 }
+.text {
+  font-size: 15px;
+  padding: 8px 12px;
+  position: relative;
+  bottom: 8px;
+  width: 100%;
+  text-align: left;
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+.activeslide {
+  background-color: #717171;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+}
+
 @media screen and (max-width: 928px) {
   body {width: 100%;}
 }
