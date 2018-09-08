@@ -4,23 +4,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124427220-1"></script>
+  <script src="topnav.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
     gtag('js', new Date());
     gtag('config', 'UA-124427220-1');
-  </script>
-  <script>
-    function myFunction() {
-        var x = document.getElementById("myTopnav");
-        if (x.className === "topnav") {
-            x.className += " responsive";
-        } else {
-            x.className = "topnav";
-        }
-    }
   </script>
 </head>
 
@@ -78,45 +69,8 @@
 </body>
 
 <footer>
+  <script src="swipe.js"></script>
   <script>
-    function swipedetect(el, callback){
-
-      var touchsurface = el,
-      swipedir,
-      startX,
-      startY,
-      distX,
-      distY,
-      threshold = 150, //required min distance traveled to be considered swipe
-      restraint = 100, // maximum distance allowed at the same time in perpendicular direction
-      allowedTime = 300, // maximum time allowed to travel that distance
-      elapsedTime,
-      startTime,
-      handleswipe = callback || function(swipedir){}
-
-      touchsurface.addEventListener('touchstart', function(e){
-        var touchobj = e.changedTouches[0]
-        swipedir = 'none'
-        dist = 0
-        startX = touchobj.pageX
-        startY = touchobj.pageY
-        startTime = new Date().getTime() // record time when finger first makes contact with surface
-      }, false)
-
-      touchsurface.addEventListener('touchmove', function(e){}, false)
-
-      touchsurface.addEventListener('touchend', function(e){
-        var touchobj = e.changedTouches[0]
-        dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
-        elapsedTime = new Date().getTime() - startTime // get time elapsed
-        // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
-        if (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchobj.pageY - startY) <= 100){
-          swipedir = (dist < 0)? 'right' : 'left'
-        }
-        handleswipe(swipedir)
-      }, false)
-    }
-
     var el = document.getElementById('swipe')
     swipedetect(el, function(swipedir){
       if (swipedir =='left'){
