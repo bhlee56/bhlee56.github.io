@@ -40,7 +40,7 @@
     </a>
   </div>
 
-  <div class="section">
+  <div class="section" id="swipe">
     <h1>제28대 한국물리학회 회장 후보자 이범훈의 약속</h1>
     <h3>1. 연구비 개선 및 연구 제도 개선</h3>
     <p>회원님들이 가슴 깊이 소중히 생각하시는 바와 같이 물리학은 현대 과학 기술의 발전을 이끄는 중요한 연구 활동이며, 과학 기술의 근간을 이루는 중요한 지식입니다. 저 또한 물리학의 발전은 나라가 잘 되는데 반드시 필요하며, 물리학을 가르치고 연구하는데 들어가는 지원 규모가 곧 나라의 발전 수준을 가늠하는 잣대라고 생각합니다. 저는 국가의 연구비 지원 규모와 지원 체계가 지금보다 더 개선되어 회원님들이 생각하시는 연구와 교육에 한발 더 가까이 가실 수 있도록 최선의 노력을 다하겠습니다.</p>
@@ -57,4 +57,58 @@
     <br>
   </div>
 </body>
+
+<footer>
+  <script>
+    function swipedetect(el, callback){
+
+      var touchsurface = el,
+      swipedir,
+      startX,
+      startY,
+      distX,
+      distY,
+      threshold = 150, //required min distance traveled to be considered swipe
+      restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+      allowedTime = 300, // maximum time allowed to travel that distance
+      elapsedTime,
+      startTime,
+      handleswipe = callback || function(swipedir){}
+
+      touchsurface.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0]
+        swipedir = 'none'
+        dist = 0
+        startX = touchobj.pageX
+        startY = touchobj.pageY
+        startTime = new Date().getTime() // record time when finger first makes contact with surface
+        e.preventDefault()
+      }, false)
+
+      touchsurface.addEventListener('touchmove', function(e){}, false)
+
+      touchsurface.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0]
+        dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
+        elapsedTime = new Date().getTime() - startTime // get time elapsed
+        // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
+        if (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchobj.pageY - startY) <= 100){
+          swipedir = (dist < 0)? 'right' : 'left'
+        }
+        handleswipe(swipedir)
+        e.preventDefault()
+      }, false)
+    }
+
+    var el = document.getElementById('swipe')
+    swipedetect(el, function(swipedir){
+      if (swipedir =='left'){
+        window.open("0.html","_self")
+      }
+      else if (swipedir =='right'){
+        window.open("2.html","_self")
+      }
+    })
+  </script>
+</footer>
 </html>

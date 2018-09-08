@@ -40,7 +40,7 @@
     </a>
   </div>
 
-  <div class="section">
+  <div class="section" id="swipe">
     <h1>제28대 한국물리학회 회장 후보자 이범훈의 약속</h1>
     <p><a class="buttn" href="http://www.kps.or.kr/upload/data/cae8b41485de794ba17ebd39346a07401.pdf" target="_blank" style="cursor: pointer; border-top: 1px solid rgb(153, 204, 204); border-right: 1px solid rgb(153, 204, 204); border-left: 1px solid rgb(153, 204, 204); border-bottom-style: solid; border-bottom-color: rgb(153, 204, 204); background: rgb(237, 237, 237); padding: 4px 8px; line-height: 24px; border-radius: 4px; color: rgb(0, 51, 153); text-align: center; font-size: 12px;"><b>소견서 보기</b></a><span style="color: rgb(51, 51, 51); font-size: 12px;">&nbsp; &nbsp;</span><a target="_blank" class="buttn" href="https://onedrive.live.com/embed?cid=1B2A1437FCE4CF39&resid=1B2A1437FCE4CF39!113&authkey=AOPcoUnTe53D68k" style="cursor: pointer; border-top: 1px solid rgb(153, 204, 204); border-right: 1px solid rgb(153, 204, 204); border-left: 1px solid rgb(153, 204, 204); border-bottom-style: solid; border-bottom-color: rgb(153, 204, 204); background: rgb(237, 237, 237); padding: 4px 8px; line-height: 24px; border-radius: 4px; color: rgb(0, 51, 153); text-align: center; font-size: 12px;"><b>동영상 보기</b></a><span style="color: rgb(51, 51, 51); font-size: 12px;">&nbsp;</span><br></p>
     <p>존경하는 한국물리학회 회원 여러분, 안녕하십니까? 제 28대 회장 후보 서강대 <b>이범훈</b>입니다.</p>
@@ -74,4 +74,58 @@
     <br>
   </div>
 </body>
+
+<footer>
+  <script>
+    function swipedetect(el, callback){
+
+      var touchsurface = el,
+      swipedir,
+      startX,
+      startY,
+      distX,
+      distY,
+      threshold = 150, //required min distance traveled to be considered swipe
+      restraint = 100, // maximum distance allowed at the same time in perpendicular direction
+      allowedTime = 300, // maximum time allowed to travel that distance
+      elapsedTime,
+      startTime,
+      handleswipe = callback || function(swipedir){}
+
+      touchsurface.addEventListener('touchstart', function(e){
+        var touchobj = e.changedTouches[0]
+        swipedir = 'none'
+        dist = 0
+        startX = touchobj.pageX
+        startY = touchobj.pageY
+        startTime = new Date().getTime() // record time when finger first makes contact with surface
+        e.preventDefault()
+      }, false)
+
+      touchsurface.addEventListener('touchmove', function(e){}, false)
+
+      touchsurface.addEventListener('touchend', function(e){
+        var touchobj = e.changedTouches[0]
+        dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
+        elapsedTime = new Date().getTime() - startTime // get time elapsed
+        // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
+        if (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchobj.pageY - startY) <= 100){
+          swipedir = (dist < 0)? 'right' : 'left'
+        }
+        handleswipe(swipedir)
+        e.preventDefault()
+      }, false)
+    }
+
+    var el = document.getElementById('swipe')
+    swipedetect(el, function(swipedir){
+      if (swipedir =='left'){
+        window.open("7.html","_self")
+      }
+      else if (swipedir =='right'){
+        window.open("0.html","_self")
+      }
+    })
+  </script>
+</footer>
 </html>
