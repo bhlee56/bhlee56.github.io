@@ -29,7 +29,7 @@ function swipedetect(el, callback){
     dist = touchobj.pageX - startX // get total dist traveled by finger while in contact with surface
     elapsedTime = new Date().getTime() - startTime // get time elapsed
     // check that elapsed time is within specified, horizontal dist traveled >= threshold, and vertical dist traveled <= 100
-    if (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchobj.pageY - startY) <= 100){
+    if (elapsedTime <= allowedTime && Math.abs(dist) >= threshold && Math.abs(touchobj.pageY - startY) <= restraint){
       swipedir = (dist < 0)? 'right' : 'left'
     }
     handleswipe(swipedir)
