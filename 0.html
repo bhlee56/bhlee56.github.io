@@ -6,7 +6,6 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="style.css">
   <script async src="https://www.googletagmanager.com/gtag/js?id=UA-124427220-1"></script>
-  <script src="topnav.js"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
     function gtag(){dataLayer.push(arguments);}
@@ -18,14 +17,12 @@
 <body>
   <div class="topnav" id="myTopnav">
     <a href="index.html">출마의 변</a>
-    <a class="active" href="0.html">약 력</a>
-    <a href="1.html">연구비</a>
-    <a href="2.html">교 육</a>
-    <a href="3.html">학 술</a>
-    <a href="4.html">커뮤니티</a>
-    <a href="5.html">학회운영</a>
+    <a href="0.html">약 력</a>
+    <a href="10.html">공 약</a>
     <a href="6.html">Q&A</a>
     <a href="7.html">사 진</a>
+    <a href="8.html">미 래</a>
+    <a href="9.html">마무리</a>
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
@@ -33,6 +30,7 @@
 
   <div class="section" id="swipe">
     <h1>제28대 한국물리학회 회장 후보자 이범훈의 약속</h1>
+    <h3>"이범훈의 약력"</h3><br>
     <h3>Bum-Hoon Lee, 이범훈</h3>
     <div id="grid">
       <div>
@@ -161,7 +159,8 @@
 </body>
 
 <footer>
-  <script src="swipe.js"></script>
+  <script src="js/topnav.js"></script>
+  <script src="js/swipe.js"></script>
   <script>
     var el = document.getElementById('swipe')
     swipedetect(el, function(swipedir){
@@ -169,7 +168,7 @@
         window.open("index.html","_self")
       }
       else if (swipedir =='right'){
-        window.open("1.html","_self")
+        window.open("10.html","_self")
       }
     })
   </script>
